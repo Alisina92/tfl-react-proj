@@ -1,17 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import './App.css';
-import Heading from './Heading';
-
+import "./App.css";
+import Heading from "./Heading";
 
 /*App JS will have the head and body components*/
-const App=()=> {
+const App = () => {
   return (
     <div>
-       <Heading/>
-        
+      <Heading />
     </div>
   );
-}
+};
 
 export default App;
