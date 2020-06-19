@@ -1,14 +1,16 @@
 import React,{useEffect} from 'react';
 
 const LineList = (props) =>{
-     useEffect(()=>{
-            /* if props selected value not equal null fetch the data */
-        if(props.selectedValue){
-       fetch(`https://api.tfl.gov.uk/Line/Mode/${props.selectedValue}`)
-        .then(Response => Response.json())
-        .then(data =>props.setLineSelector(data));// data 
-          }
-    },[props.selectedValue])// pass props as in array dependency
+  
+  
+  useEffect(() => {
+    /* if props selected value not equal null fetch the data */
+    if (props.selectedValue) {
+      fetch(`https://api.tfl.gov.uk/Line/Mode/${props.selectedValue}`)
+        .then((Response) => Response.json())
+        .then((data) => props.setLineSelector(data)); // data
+    }
+  }, [props.selectedValue]);// pass props as in array dependency
      
       /* if props line selector  is null return nothing selected*/ 
     if(props.lineSelector==null){
@@ -29,7 +31,7 @@ return (
       })}
     </select>
     {/* display the line selected on the page*/}
-    <p>Line selected:{props.selectedLine}</p>
+     <p>Line selected:{props.selectedLine}</p> 
   </div>
 );
   
