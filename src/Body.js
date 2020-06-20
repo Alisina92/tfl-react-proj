@@ -7,7 +7,7 @@ const Body = (props) => {
     fetch(`https://api.tfl.gov.uk/Line/${props.selectedLine}/Route`)
       .then((Response) => Response.json())
       .then((data) => props.setDestination(data));
-  }, [props.selectedLine]);
+  }, [props.selectedLine,props]);
 
 ;
   return (
