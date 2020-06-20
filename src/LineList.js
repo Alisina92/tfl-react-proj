@@ -10,7 +10,7 @@ const LineList = (props) =>{
         .then((Response) => Response.json())
         .then((data) => props.setLineSelector(data)); // data
     }
-  }, [props.selectedValue,props]);// pass props as in array dependency
+  }, [props.selectedValue]);// pass props as in array dependency
      
       /* if props line selector  is null return nothing selected*/ 
     if(props.lineSelector==null){
